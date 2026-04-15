@@ -1,27 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { achievements } from '../../utils/achievementsData';
 
-interface Achievement {
-  year: string;
-  category: 'photo' | 'video' | 'web';
-  client: string;
-  description: string;
-  url?: string;
-}
-
-const achievements: Achievement[] = [
-  { year: '2026', category: 'photo', client: 'ひいな節実行委員会', description: 'イベント告知用写真撮影', url: 'https://u0ff1.hp.peraichi.com/' },
-  { year: '2025', category: 'video', client: '久留米運送株式会社', description: 'プロモーションビデオ制作', url: 'https://youtu.be/gi_B8BTO0AU' },
-  { year: '2025', category: 'video', client: '株式会社仁張工作所', description: 'ドローン空撮映像提供', url: 'https://youtu.be/SiFP5XmatvE?si=Ra0H27R15BWP_4Aj' },
-  { year: '2025', category: 'video', client: 'UMゴルフ', description: 'プロモーションビデオ制作', url: 'https://www.youtube.com/watch?v=Q1Er45dh8qQ' },
-  { year: '2025', category: 'photo', client: 'UMゴルフ', description: 'コーチプロフィール写真撮影', url: 'https://umgolf68.com/instructor/' },
-  { year: '2025', category: 'video', client: 'つりきっぷ', description: 'ドローン空撮映像提供', url: 'https://youtu.be/Z-rHTokh_lI?si=toulUoyc8ZaaMU60' },
-  { year: '2025', category: 'video', client: '一般社団法人TOMOSU', description: 'Bonchi シェアオフィス紹介動画制作' },
-  { year: '2024', category: 'video', client: 'あわの里', description: 'プロモーションビデオ制作', url: 'https://youtu.be/yt1MMvywEuE' },
-  { year: '2024', category: 'photo', client: '家具の川上', description: '店舗外観写真撮影' },
-  { year: '2024', category: 'photo', client: '有限会社くるみの木', description: '器・商品撮影' },
-  { year: '2024', category: 'photo', client: '株式会社天平楽座', description: '企業PR写真撮影' },
-  { year: '2024', category: 'web', client: '株式会社COST STATION', description: 'ホームページ制作', url: 'https://cost-sta.com/' },
-];
+const PAGE_SIZE = 10;
 
 const ExternalLinkIcon = () => (
   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -32,6 +12,14 @@ const ExternalLinkIcon = () => (
 );
 
 const AchievementsSection: React.FC = () => {
+  const [page, setPage] = useState(0);
+
+  const totalPages = Math.ceil(achievements.length / PAGE_SIZE);
+  const pageItems = achievements.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+
+  const handlePrev = () => setPage(p => (p > 0 ? p - 1 : totalPages - 1));
+  const handleNext = () => setPage(p => (p < totalPages - 1 ? p + 1 : 0));
+
   return (
     <section id="achievements" className="section">
       <div className="section-header">
@@ -39,14 +27,22 @@ const AchievementsSection: React.FC = () => {
           <span className="section-number">04 Works</span>
           <h2>WORKS</h2>
         </div>
+        <div className="section-nav">
+          <button onClick={handlePrev} aria-label="Previous">
+            <span style={{ transform: 'rotate(180deg)', display: 'inline-block' }}>&#10140;</span>
+          </button>
+          <button onClick={handleNext} aria-label="Next">
+            &#10140;
+          </button>
+        </div>
       </div>
 
       <div className="achievements-list">
-        {achievements.map((item, index) => (
+        {pageItems.map((item, index) => (
           <div key={index} className="achievement-item">
             <span className="achievement-year">{item.year}</span>
             <span className={`achievement-category achievement-category--${item.category}`}>
-              {item.category === 'photo' ? 'Photo' : 'Video'}
+              {item.category === 'photo' ? 'Photo' : item.category === 'video' ? 'Video' : 'Web'}
             </span>
             <span className="achievement-client">{item.client}</span>
             <span className="achievement-desc">{item.description}</span>
@@ -65,6 +61,21 @@ const AchievementsSection: React.FC = () => {
             </span>
           </div>
         ))}
+      </div>
+
+      <div className="gallery-controls">
+        <div className="gallery-controls-nav">
+          <button onClick={handlePrev} aria-label="Previous">
+            <span style={{ transform: 'rotate(180deg)', display: 'inline-block' }}>&#10140;</span>
+          </button>
+          <button onClick={handleNext} aria-label="Next">
+            &#10140;
+          </button>
+        </div>
+        <div className="gallery-controls-counter">
+          <span className="current">{String(page + 1).padStart(2, '0')}</span>
+          <span> / {String(totalPages).padStart(2, '0')}</span>
+        </div>
       </div>
     </section>
   );
