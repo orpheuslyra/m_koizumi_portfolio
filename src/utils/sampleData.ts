@@ -146,8 +146,8 @@ export const samplePhotos: Photo[] = [
   },
   {
     id: '1',
-    title: '家具の川上　店舗リニューアル', 
-    description: '家具の川上さま店舗撮影',
+    title: '家具の川上', 
+    description: '家具の川上さまリニューアル店舗撮影',
     imageUrl: kawakami,
     category: 'commercial',
     featured: false,

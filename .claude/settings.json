@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git ls-tree:*)",
+      "Bash(git rm:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git push:*)",
+      "Bash(git reset:*)",
+      "Bash(du -sh src/assets/videos/BonchiShareOffice.mp4 src/assets/videos/hero/*)"
+    ],
+    "additionalDirectories": [
+      "/Users/koizumimitsuo/claudeCode/portfolio/src/.git"
+    ]
+  }
+}

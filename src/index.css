@@ -179,6 +179,30 @@ header {
   object-fit: cover;
 }
 
+/* Hero Loading */
+.hero-loading {
+  position: absolute;
+  inset: 0;
+  background: var(--color-bg);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(196, 148, 106, 0.25);
+  border-top-color: var(--color-accent);
+  border-radius: 50%;
+  animation: heroSpin 1s linear infinite;
+}
+
+@keyframes heroSpin {
+  to { transform: rotate(360deg); }
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -387,6 +411,7 @@ header {
 /* layout-full: 画像を左右20pxマージンで全面表示 */
 .gallery-slide.layout-full {
   flex-direction: column;
+  position: relative;
 }
 
 .gallery-slide.layout-full .slide-image {
@@ -415,6 +440,7 @@ header {
   flex-direction: column;
   justify-content: flex-end;
   background: var(--color-bg);
+  position: relative;
 }
 
 .slide-image img {
@@ -1049,8 +1075,13 @@ footer a {
     padding-bottom: 0.5rem;
   }
 
-  /* Photo/Video: SP でも横スクロール */
-  #photography,
+  /* Photo/Video: SP では height auto でコンテンツに合わせる */
+  #photography {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
   #videography {
     height: 100vh;
     min-height: 0;
@@ -1059,8 +1090,8 @@ footer a {
   }
 
   .horizontal-gallery {
-    flex: 1 1 0;
-    min-height: 0;
+    flex: none;
+    height: 420px;
     flex-direction: row;
     overflow-x: auto;
     overflow-y: hidden;
@@ -1080,31 +1111,46 @@ footer a {
   }
 
   .gallery-slide.layout-split .slide-image {
-    flex: 1;
-    min-height: 0;
+    flex: none;
+    height: 300px;
     width: 100%;
   }
 
   .gallery-slide.layout-split .slide-image img {
-    object-fit: cover;
+    object-fit: contain;
   }
 
   .gallery-slide.layout-split .slide-content {
     flex: none;
     width: 100%;
-    padding: 0.75rem 0 0.5rem;
+    padding: 0 0 0.5rem;
     background: var(--color-bg);
     position: static;
   }
 
-  /* layout-full: SP では cover で塗りつぶし */
-  .gallery-slide.layout-full .slide-image img {
-    object-fit: cover;
+  /* layout-full: SP では layout-split と同じ表示に揃える */
+  .gallery-slide.layout-full {
+    flex-direction: column;
   }
 
-  /* layout-full: SP ではオーバーレイを表示 */
+  .gallery-slide.layout-full .slide-image {
+    flex: none;
+    height: 300px;
+    width: 100%;
+  }
+
+  .gallery-slide.layout-full .slide-image img {
+    object-fit: contain;
+  }
+
+  /* layout-full: SP では画像の下にテキストを表示（layout-split と同じ扱い） */
   .gallery-slide.layout-full .slide-content {
-    position: absolute;
+    position: static;
+    background: var(--color-bg);
+    padding: 0 0 0.5rem;
+    flex: none;
+    width: 100%;
+    display: block;
   }
 
   /* SP: section-header の矢印を非表示、gallery-controls の矢印を表示 */

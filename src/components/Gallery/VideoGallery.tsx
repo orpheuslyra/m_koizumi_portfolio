@@ -89,25 +89,14 @@ const VideoGallery: React.FC<VideoGalleryProps> = ({ videos }) => {
             <div className="slide-image">
               <img src={video.thumbnailUrl} alt={video.title} />
               <div className="play-button" />
-              {index % 2 === 0 && (
-                <div className="slide-content">
-                  <span className="slide-category">{video.category}</span>
-                  <h3 className="slide-title">{video.title}</h3>
-                  {video.description && (
-                    <p className="slide-description">{video.description}</p>
-                  )}
-                </div>
+            </div>
+            <div className="slide-content">
+              <span className="slide-category">{video.category}</span>
+              <h3 className="slide-title">{video.title}</h3>
+              {video.description && (
+                <p className="slide-description">{video.description}</p>
               )}
             </div>
-            {index % 2 !== 0 && (
-              <div className="slide-content" style={{ position: 'relative', background: '#0a0a0a' }}>
-                <span className="slide-category">{video.category}</span>
-                <h3 className="slide-title">{video.title}</h3>
-                {video.description && (
-                  <p className="slide-description">{video.description}</p>
-                )}
-              </div>
-            )}
           </div>
         ))}
       </div>

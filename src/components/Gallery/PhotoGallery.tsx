@@ -92,42 +92,31 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ photos }) => {
           >
             <div className="slide-image">
               <img src={photo.imageUrl} alt={photo.title} />
-              {index % 2 === 0 && (
-                <div className="slide-content">
-                  <span className="slide-category">{photo.category}</span>
-                  <h3 className="slide-title">{photo.title}</h3>
-                  {photo.description && (
-                    <p className="slide-description">{photo.description}</p>
-                  )}
-                </div>
+            </div>
+            <div className="slide-content">
+              <span className="slide-category">{photo.category}</span>
+              <h3 className="slide-title">{photo.title}</h3>
+              {photo.description && (
+                <p className="slide-description">{photo.description}</p>
+              )}
+              {index % 2 !== 0 && photo.album && (
+                <Link
+                  to={`/photography/${photo.album}`}
+                  style={{
+                    marginTop: '2rem',
+                    color: '#c4946a',
+                    textDecoration: 'none',
+                    fontSize: '0.7rem',
+                    fontWeight: '500',
+                    letterSpacing: '0.2em',
+                    textTransform: 'uppercase'
+                  }}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  View Album
+                </Link>
               )}
             </div>
-            {index % 2 !== 0 && (
-              <div className="slide-content" style={{ position: 'relative', background: '#0a0a0a' }}>
-                <span className="slide-category">{photo.category}</span>
-                <h3 className="slide-title">{photo.title}</h3>
-                {photo.description && (
-                  <p className="slide-description">{photo.description}</p>
-                )}
-                {photo.album && (
-                  <Link
-                    to={`/photography/${photo.album}`}
-                    style={{
-                      marginTop: '2rem',
-                      color: '#c4946a',
-                      textDecoration: 'none',
-                      fontSize: '0.7rem',
-                      fontWeight: '500',
-                      letterSpacing: '0.2em',
-                      textTransform: 'uppercase'
-                    }}
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    View Album
-                  </Link>
-                )}
-              </div>
-            )}
           </div>
         ))}
       </div>
