@@ -7,7 +7,9 @@
       "Bash(git commit -m ':*)",
       "Bash(git push:*)",
       "Bash(git reset:*)",
-      "Bash(du -sh src/assets/videos/BonchiShareOffice.mp4 src/assets/videos/hero/*)"
+      "Bash(du -sh src/assets/videos/BonchiShareOffice.mp4 src/assets/videos/hero/*)",
+      "Bash(npm install *)",
+      "Bash(npm run *)"
     ],
     "additionalDirectories": [
       "/Users/koizumimitsuo/claudeCode/portfolio/src/.git"

@@ -4,6 +4,7 @@ import kurumi from '../assets/images/photo/kuruminoki/kurumi_utsuwa.jpg';
 import tenpyorakuza from '../assets/images/photo/tenpyorakuza/DSC00474.jpg';
 import umgolfcoach from '../assets/images/photo/umgolf/HCZ09320.jpg';
 import hiinasetsu from '../assets/images/photo/hinaseku/DSC02022.jpg';
+import narawai from '../assets/images/photo/narawai/HCZ08751.JPG';
 
 import BonchiShareOffice from '../assets/videos/BonchiShareOffice.mp4';
 import heroVideo from '../assets/videos/hero/DJI_0286.mp4';
@@ -163,7 +164,7 @@ export const samplePhotos: Photo[] = [
   },
   {
     id: '2',
-    title: 'くるみの木　器',
+    title: 'くるみの木',
     description: 'くるみの木さま商品写真',
     imageUrl: kurumi,
     category: 'commercial',
@@ -180,10 +181,17 @@ export const samplePhotos: Photo[] = [
   },
   {
     id: '5',
-    title: '',
+    title: 'UMゴルフ',
     description: 'UMゴルフさまコーチプロフィール写真',
     imageUrl: umgolfcoach,
     category: 'commercial'
+  },
+  {
+    id: '6',
+    title: 'ならわい for Students',
+    description: 'TOMOSUさま ならわい for Studentsイベント記録撮影',
+    imageUrl: narawai,
+    category: 'event'
   },
 ];
 

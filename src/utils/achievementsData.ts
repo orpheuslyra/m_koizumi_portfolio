@@ -10,6 +10,7 @@ export const achievements: Achievement[] = [
   { year: '2026', category: 'photo', client: '一般社団法人TOMOSU', description: 'イベント記録撮影' },
   { year: '2026', category: 'photo', client: 'ひいな節実行委員会', description: 'イベント告知用写真撮影', url: 'https://u0ff1.hp.peraichi.com/' },
   { year: '2025', category: 'video', client: 'ジョイパーク', description: 'ゲストハウス紹介動画撮影', url: 'https://joypark-pv.com/2026/03/03/basek49-guesthouse/' },
+  { year: '2025', category: 'video', client: 'ジョイパーク', description: 'ゲストハウス紹介動画撮影', url: 'https://joypark-pv.com/2026/04/20/nara-park-blue-sky/' },
   { year: '2025', category: 'video', client: '久留米運送株式会社', description: 'プロモーションビデオ制作', url: 'https://youtu.be/gi_B8BTO0AU' },
   { year: '2025', category: 'video', client: '株式会社仁張工作所', description: 'ドローン空撮映像提供', url: 'https://youtu.be/SiFP5XmatvE?si=Ra0H27R15BWP_4Aj' },
   { year: '2025', category: 'video', client: 'UMゴルフ', description: 'プロモーションビデオ制作', url: 'https://www.youtube.com/watch?v=Q1Er45dh8qQ' },
