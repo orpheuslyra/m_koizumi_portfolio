@@ -184,13 +184,23 @@ export const samplePhotos: Photo[] = [
     title: 'UMゴルフ',
     description: 'UMゴルフさまコーチプロフィール写真',
     imageUrl: umgolfcoach,
-    category: 'commercial'
+    category: 'commercial',
+    album: 'umgolf',
+    article: {
+      content: 'UMゴルフ様のコーチプロフィール写真を担当させていただきました。コーチの人柄と専門性が伝わるよう、自然な表情とプロフェッショナルな雰囲気を両立させる撮影を心がけました。',
+      client: 'UMゴルフ',
+      date: '2024年5月',
+      challenge: 'コーチの人柄と専門性を同時に表現すること',
+      solution: '自然な表情を引き出すコミュニケーションと、プロフェッショナルな背景選択で撮影',
+      result: 'コーチの魅力が伝わる写真で、ウェブサイトやプロモーション資料で好評をいただいています'
+    }
   },
   {
     id: '6',
     title: 'ならわい for Students',
     description: 'TOMOSUさま ならわい for Studentsイベント記録撮影',
     imageUrl: narawai,
+    album: 'narawai',
     category: 'event'
   },
 ];
