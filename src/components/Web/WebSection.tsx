@@ -20,7 +20,6 @@ const WebSection: React.FC<WebSectionProps> = ({ webWorks }) => {
     <section id="web" className="section">
       <div className="section-header">
         <div className="section-title">
-          <span className="section-number">03 Web</span>
           <h2>Web Development</h2>
         </div>
       </div>

@@ -79,11 +79,12 @@ header {
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 2rem 3rem;
+  padding: 1rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  mix-blend-mode: difference;
+  background: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(12px);
 
   @media (max-width: 768px) {
     padding: 1.25rem 1.5rem;

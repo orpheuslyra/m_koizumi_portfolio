@@ -65,7 +65,6 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ photos }) => {
       {/* Section Header */}
       <div className="section-header">
         <div className="section-title">
-          <span className="section-number">01 Photography</span>
           <h2>Photography</h2>
         </div>
         <div className="section-nav">

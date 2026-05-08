@@ -61,7 +61,6 @@ const VideoGallery: React.FC<VideoGalleryProps> = ({ videos }) => {
       {/* Section Header */}
       <div className="section-header">
         <div className="section-title">
-          <span className="section-number">02 Videography</span>
           <h2>Videography</h2>
         </div>
         <div className="section-nav">

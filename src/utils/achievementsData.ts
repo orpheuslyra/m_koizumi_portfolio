@@ -18,7 +18,7 @@ export const achievements: Achievement[] = [
   { year: '2025', category: 'video', client: 'つりきっぷ', description: 'ドローン空撮映像提供', url: 'https://youtu.be/Z-rHTokh_lI?si=toulUoyc8ZaaMU60' },
   { year: '2025', category: 'video', client: 'らんぷの宿', description: 'プロモーションビデオ制作'},
   { year: '2025', category: 'web', client: '株式会社ナコード', description: 'ランディングページ制作', url: 'https://general-bpo.com/' },
-  { year: '2025', category: 'video', client: '一般社団法人TOMOSU', description: 'Bonchi シェアオフィス紹介動画制作' },
+  { year: '2025', category: 'video', client: '一般社団法人TOMOSU', description: 'BONCHI シェアオフィス紹介動画制作' },
   { year: '2024', category: 'video', client: 'あわの里', description: 'プロモーションビデオ制作', url: 'https://youtu.be/yt1MMvywEuE' },
   { year: '2024', category: 'photo', client: '家具の川上', description: '店舗外観写真撮影' },
   { year: '2024', category: 'photo', client: '有限会社くるみの木', description: '器・商品撮影' },
