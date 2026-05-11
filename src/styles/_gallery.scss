@@ -1,0 +1,360 @@
+// ============================
+//   SECTIONS - Photo Book Style
+// ============================
+.section {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    min-height: auto;
+  }
+}
+
+.section-header {
+  padding: 4rem 6rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--color-border);
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 3rem 3rem 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 1.5rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.section-number {
+  font-size: 0.65rem;
+  color: var(--color-accent);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.section-nav {
+  display: flex;
+  gap: 0.5rem;
+
+  button {
+    width: 48px;
+    height: 48px;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+
+    &:hover {
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+      color: var(--color-bg);
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+// Photo & Video sections
+#photography,
+#videography {
+  height: 100vh;
+  min-height: 0;
+  max-height: 100vh;
+  overflow: hidden;
+
+  .section-header {
+    @media (max-width: 768px) {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+// ============================
+//   HORIZONTAL GALLERY
+// ============================
+.horizontal-gallery {
+  flex: 1 1 0;
+  min-height: 0;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    flex: none;
+    height: 420px;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+  }
+}
+
+.gallery-slide {
+  flex: 0 0 100%;
+  min-height: 0;
+  display: flex;
+  scroll-snap-align: start;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+
+  // layout-full: 画像を左右20pxマージンで全面表示
+  &.layout-full {
+    flex-direction: column;
+    position: relative;
+
+    .slide-image {
+      flex: 1;
+      min-height: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+
+      .slide-image {
+        flex: none;
+        height: 300px;
+        width: 100%;
+
+        img {
+          object-fit: contain;
+        }
+      }
+
+      // layout-full: SP では画像の下にテキストを表示
+      .slide-content {
+        position: static;
+        background: var(--color-bg);
+        padding: 0 0 0.5rem;
+        flex: none;
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+
+  // layout-split: 左に画像、右にテキスト
+  &.layout-split {
+    flex-direction: row;
+    gap: 0;
+
+    .slide-image {
+      flex: 0 0 62%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide-content {
+      flex: 0 0 38%;
+      padding: 3rem 3rem 3rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: var(--color-bg);
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+
+      .slide-image {
+        flex: none;
+        height: 300px;
+        width: 100%;
+
+        img {
+          object-fit: contain;
+        }
+      }
+
+      .slide-content {
+        flex: none;
+        width: 100%;
+        padding: 0 0 0.5rem;
+        background: var(--color-bg);
+        position: static;
+      }
+    }
+  }
+
+  .slide-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 1.5s var(--transition-slow);
+  }
+
+  &:hover .slide-image img {
+    transform: scale(1.03);
+  }
+
+  @media (max-width: 768px) {
+    flex: 0 0 100%;
+    min-height: 0;
+    padding: 20px 20px 0;
+    scroll-snap-align: start;
+  }
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3rem;
+  background: linear-gradient(to top, rgba(10, 10, 10, 0.95), transparent);
+}
+
+.slide-category {
+  font-size: 0.65rem;
+  color: var(--color-accent);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.slide-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.slide-description {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  max-width: 400px;
+}
+
+// Gallery Controls (nav + counter)
+.gallery-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 20px;
+  border-top: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+// PC: nav arrows are in section-header, hide them here
+.gallery-controls-nav {
+  display: none;
+
+  button {
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+
+    &:hover {
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+      color: var(--color-bg);
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    gap: 0.5rem;
+
+    button {
+      width: 44px;
+      height: 44px;
+      background: transparent;
+      border: 1px solid var(--color-border);
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+  }
+}
+
+.gallery-controls-counter {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.1em;
+}
+
+// ============================
+//   VIDEO - Play Button
+// ============================
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s var(--transition-smooth);
+
+  &::after {
+    content: '';
+    border-left: 12px solid white;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    margin-left: 3px;
+  }
+}

@@ -1,5 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import './PhotoGallery.scss';
+import SectionHeader from '../../utils/SectionHeader';
+import NavButtons from '../../utils/NavButtons';
 
 interface Photo {
   id: string;
@@ -62,20 +65,7 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ photos }) => {
 
   return (
     <section id="photography" className="section">
-      {/* Section Header */}
-      <div className="section-header">
-        <div className="section-title">
-          <h2>Photography</h2>
-        </div>
-        <div className="section-nav">
-          <button onClick={handlePrev} aria-label="Previous">
-            <span style={{ transform: 'rotate(180deg)', display: 'inline-block' }}>&#10140;</span>
-          </button>
-          <button onClick={handleNext} aria-label="Next">
-            &#10140;
-          </button>
-        </div>
-      </div>
+      <SectionHeader title="Photography" onPrev={handlePrev} onNext={handleNext} />
 
       {/* Horizontal Gallery */}
       <div
@@ -123,12 +113,7 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ photos }) => {
       {/* Controls: nav + counter */}
       <div className="gallery-controls">
         <div className="gallery-controls-nav">
-          <button onClick={handlePrev} aria-label="Previous">
-            <span style={{ transform: 'rotate(180deg)', display: 'inline-block' }}>&#10140;</span>
-          </button>
-          <button onClick={handleNext} aria-label="Next">
-            &#10140;
-          </button>
+          <NavButtons onPrev={handlePrev} onNext={handleNext} />
         </div>
         <div className="gallery-controls-counter">
           <span className="current">{String(currentIndex + 1).padStart(2, '0')}</span>

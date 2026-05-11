@@ -1,0 +1,93 @@
+// ============================
+//   FOOTER - Minimal
+// ============================
+footer {
+  padding: 3rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 2rem 3rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 1.5rem;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+}
+
+// ============================
+//   CONTACT SECTION
+// ============================
+.contact-section {
+  background: var(--color-bg);
+}
+
+.contact-inner {
+  padding: 2rem 6rem 4rem;
+
+  @media (max-width: 1024px) {
+    padding: 2rem 3rem 4rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 1.5rem 3rem;
+  }
+}
+
+.contact-sub {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  padding: 0.9rem 1.5rem;
+  border: 1px solid var(--color-border);
+  transition: border-color 0.3s, color 0.3s;
+
+  &:hover {
+    border-color: var(--color-accent);
+    color: var(--color-text);
+  }
+}
+
+.contact-link-icon {
+  display: flex;
+  align-items: center;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.contact-link-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}

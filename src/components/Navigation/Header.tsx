@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
+import './Header.scss';
 
 interface HeaderProps {
   activeSection?: string;

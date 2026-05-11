@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../Navigation/Header';
+import './ProfilePage.scss';
 import Footer from '../Navigation/Footer';
 import SkillGroup from './SkillGroup';
 import Certifications from './Certifications';

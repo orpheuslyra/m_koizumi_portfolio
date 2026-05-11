@@ -7,10 +7,9 @@ import VideoGallery from './components/Gallery/VideoGallery';
 import WebSection from './components/Web/WebSection';
 import AchievementsSection from './components/Achievements/AchievementsSection';
 import Footer from './components/Navigation/Footer';
-import ContentDetail from './components/Detail/ContentDetail';
 import ProfilePage from './components/Profile/ProfilePage';
 import PhotoAlbumPage from './components/Gallery/PhotoAlbumPage';
-import { samplePhotos, sampleVideos, sampleWebWorks } from './utils/sampleData';
+import { samplePhotos, sampleVideos, sampleWebWorks } from './utils/portfolioData';
 
 // Home page component
 const HomePage: React.FC = () => {
@@ -69,7 +68,6 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/detail/:type/:id" element={<ContentDetail />} />
         <Route path="/photography/:album" element={<PhotoAlbumPage photos={samplePhotos} />} />
       </Routes>
     </Router>

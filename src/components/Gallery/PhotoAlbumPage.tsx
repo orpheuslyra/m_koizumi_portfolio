@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import './PhotoAlbumPage.scss';
 
 // Vite の import.meta.glob で photo フォルダ以下の全画像をビルド時に取得
 const allPhotoModules = import.meta.glob(

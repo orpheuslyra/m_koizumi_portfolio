@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { heroVideoSrc } from '../../utils/sampleData';
+import { heroVideoSrc } from '../../utils/portfolioData';
+import './HeroSection.scss';
 
 const HeroSection: React.FC = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
