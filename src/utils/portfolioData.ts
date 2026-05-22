@@ -5,6 +5,7 @@ import tenpyorakuza from '../assets/images/photo/tenpyorakuza/DSC00474.jpg';
 import umgolfcoach from '../assets/images/photo/umgolf/HCZ09320.jpg';
 import hiinasetsu from '../assets/images/photo/hinaseku/DSC02022.jpg';
 import narawai from '../assets/images/photo/narawai/narawai_thumb.jpg';
+import naralandscape from '../assets/images/photo/nara/DSC09121.JPG';
 
 import BonchiShareOffice from '../assets/videos/BonchiShareOffice.mp4';
 import heroVideo from '../assets/videos/hero/DJI_0286.mp4';
@@ -120,14 +121,6 @@ export const samplePhotos: Photo[] = [
     imageUrl: hiinasetsu,
     category: 'event',
     album: 'hinaseku',
-    article: {
-      content: 'ひいな節様の告知用写真撮影を担当させていただきました。伝統的な日本の音楽と文化を表現するため、和装の美しさと自然光を活かした撮影手法を採用しました。',
-      client: 'ひいな節',
-      date: '2025年3月',
-      challenge: '店舗の雰囲気と商品の魅力を同時に表現すること',
-      solution: '自然光を活かし、お客様の笑顔と家具の質感を両立させる撮影手法を採用',
-      result: '店舗の温かい雰囲気が伝わる写真で、お客様にも大変満足いただけました'
-    }
   },
   {
     id: '4',
@@ -136,14 +129,6 @@ export const samplePhotos: Photo[] = [
     imageUrl: tenpyorakuza,
     category: 'commercial',
     album: 'tenpyorakuza',
-    article: {
-      content: '天平楽座様の企業PR写真撮影を担当させていただきました。',
-      client: '天平楽座',
-      date: '2025年6月',
-      challenge: '店舗の雰囲気と商品の魅力を同時に表現すること',
-      solution: '自然光を活かし、お客様の笑顔と家具の質感を両立させる撮影手法を採用',
-      result: '店舗の温かい雰囲気が伝わる写真で、お客様にも大変満足いただけました'
-    }
   },
   {
     id: '1',
@@ -202,6 +187,14 @@ export const samplePhotos: Photo[] = [
     imageUrl: narawai,
     album: 'narawai',
     category: 'event'
+  },
+  {
+    id: '7',
+    title: '奈良の風景',
+    description: '奈良の風景写真',
+    imageUrl: naralandscape,
+    album: 'nara',
+    category: 'landscape'
   },
 ];
 
