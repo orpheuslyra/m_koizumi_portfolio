@@ -5,7 +5,7 @@ import tenpyorakuza from '../assets/images/photo/tenpyorakuza/DSC00474.jpg';
 import umgolfcoach from '../assets/images/photo/umgolf/HCZ09320.jpg';
 import hiinasetsu from '../assets/images/photo/hinaseku/DSC02022.jpg';
 import narawai from '../assets/images/photo/narawai/narawai_thumb.jpg';
-import naralandscape from '../assets/images/photo/nara/DSC09121.JPG';
+import naralandscape from '../assets/images/photo/nara/DSC09121.jpg';
 
 import BonchiShareOffice from '../assets/videos/BonchiShareOffice.mp4';
 import heroVideo from '../assets/videos/hero/DJI_0286.mp4';
