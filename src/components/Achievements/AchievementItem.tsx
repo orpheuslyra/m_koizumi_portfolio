@@ -4,6 +4,7 @@ import type { Achievement } from '../../utils/achievementsData';
 const categoryLabel: Record<Achievement['category'], string> = {
   photo: 'Photo',
   video: 'Video',
+  'photo-video': 'Photo/Video',
   web: 'Web',
 };
 

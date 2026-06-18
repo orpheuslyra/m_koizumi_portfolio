@@ -1,12 +1,14 @@
 export interface Achievement {
   year: string;
-  category: 'photo' | 'video' | 'web';
+  category: 'photo' | 'video' | 'web' | 'photo-video';
   client: string;
   description: string;
   url?: string;
 }
 
 export const achievements: Achievement[] = [
+  { year: '2026', category: 'photo-video', client: '親愛幼稚園', description: '園内撮影・園紹介動画制作' },
+  { year: '2026', category: 'photo', client: 'アスカ工業株式会社', description: '製品写真撮影' },
   { year: '2026', category: 'photo', client: '一般社団法人TOMOSU', description: 'イベント記録撮影' },
   { year: '2026', category: 'photo', client: 'ひいな節実行委員会', description: 'イベント告知用写真撮影', url: 'https://u0ff1.hp.peraichi.com/' },
   { year: '2025', category: 'video', client: 'ジョイパーク', description: 'ゲストハウス紹介動画撮影', url: 'https://joypark-pv.com/2026/03/03/basek49-guesthouse/' },
