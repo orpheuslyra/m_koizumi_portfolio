@@ -7,7 +7,9 @@ export interface Achievement {
 }
 
 export const achievements: Achievement[] = [
-  { year: '2026', category: 'photo-video', client: '親愛幼稚園', description: '園内撮影・園紹介動画制作' },
+  { year: '2026', category: 'photo', client: 'EO Osaka', description: 'OLC2026イベント写真動画撮影', url: 'https://www.eoosaka.org/eo_blog/monthly-meeting/5284/' },
+  { year: '2026', category: 'photo', client: '木谷ワイン', description: '商品写真撮影', url: 'https://narawine.com/' },
+  { year: '2026', category: 'photo-video', client: '親愛幼稚園', description: '園内撮影・園紹介動画制作', url: 'https://shin-ai.ed.jp/' },
   { year: '2026', category: 'photo', client: 'アスカ工業株式会社', description: '製品写真撮影' },
   { year: '2026', category: 'photo', client: '一般社団法人TOMOSU', description: 'イベント記録撮影' },
   { year: '2026', category: 'photo', client: 'ひいな節実行委員会', description: 'イベント告知用写真撮影', url: 'https://u0ff1.hp.peraichi.com/' },

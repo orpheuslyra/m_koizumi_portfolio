@@ -4,18 +4,21 @@ import kurumi from '../assets/images/photo/kuruminoki/kurumi_utsuwa.jpg';
 import tenpyorakuza from '../assets/images/photo/tenpyorakuza/DSC00474.jpg';
 import umgolfcoach from '../assets/images/photo/umgolf/HCZ09320.jpg';
 import hiinasetsu from '../assets/images/photo/hinaseku/DSC02022.jpg';
+import narasightseeing from '../assets/images/photo/narasightseeing/20260916-10.jpg';
+import kitaniwine from '../assets/images/photo/kitaniwine/DSC09818-2.jpg';
 import narawai from '../assets/images/photo/narawai/narawai_thumb.jpg';
 import naralandscape from '../assets/images/photo/nara/DSC09121.jpeg';
 
 import BonchiShareOffice from '../assets/videos/BonchiShareOffice.mp4';
 import heroVideo from '../assets/videos/hero/DJI_0286.mp4';
 
+
 //写真サムネイル
 import umgolfThumbnail from '../assets/videos/thumbnail/umgolf_thumb.jpg';
 import awanosatoThumbnail from '../assets/videos/thumbnail/awanosato_thumb.jpg';
 import kurumeThumbnail from '../assets/videos/thumbnail/kurume_thumb.jpg';
 import BonchiShareOfficeThumbnail from '../assets/videos/thumbnail/BonchiShareOffice.jpg';
-
+import shinaiThumbnail from '../assets/videos/thumbnail/shinai_thumb.jpg';
 
 //Webサイト
 import coststationss from '../assets/images/web/coststationscreenshot.png';
@@ -115,6 +118,22 @@ export const heroVideoSrc = heroVideo
 
 export const samplePhotos: Photo[] = [
   {
+    id: '5',
+    title: '奈良公園プライベート撮影',
+    description: '奈良公園での観光客向けプライベート撮影',
+    imageUrl: narasightseeing,
+    category: 'portrait',
+    album: 'narasightseeing',
+  },
+  {
+    id: '6',
+    title: '木谷ワイン',
+    description: '木谷ワインさまの商品写真撮影',
+    imageUrl: kitaniwine,
+    category: 'commercial',
+    album: 'kitaniwine',
+  },
+  {
     id: '3',
     title: 'ひいな節',
     description: 'ひいな節告知用写真撮影',
@@ -200,7 +219,7 @@ export const samplePhotos: Photo[] = [
 
 // サンプル動画データ
 export const sampleVideos: Video[] = [
-    {
+      {
     id: '1',
     title: '久留米運送株式会社',
     description: '久留米運送株式会社プロモーションビデオ制作',
