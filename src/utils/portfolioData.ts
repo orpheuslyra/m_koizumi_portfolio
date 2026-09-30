@@ -18,7 +18,6 @@ import umgolfThumbnail from '../assets/videos/thumbnail/umgolf_thumb.jpg';
 import awanosatoThumbnail from '../assets/videos/thumbnail/awanosato_thumb.jpg';
 import kurumeThumbnail from '../assets/videos/thumbnail/kurume_thumb.jpg';
 import BonchiShareOfficeThumbnail from '../assets/videos/thumbnail/BonchiShareOffice.jpg';
-import shinaiThumbnail from '../assets/videos/thumbnail/shinai_thumb.jpg';
 
 //Webサイト
 import coststationss from '../assets/images/web/coststationscreenshot.png';
