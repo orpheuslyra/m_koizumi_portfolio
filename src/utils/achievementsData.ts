@@ -7,7 +7,9 @@ export interface Achievement {
 }
 
 export const achievements: Achievement[] = [
-  { year: '2026', category: 'photo', client: 'EO Osaka', description: 'OLC2026イベント写真動画撮影', url: 'https://www.eoosaka.org/eo_blog/monthly-meeting/5284/' },
+  { year: '2026', category: 'web', client: 'UM GOLF', description: 'UM GOLF サイトリニューアル', url: 'https://umgolf68.com/' },
+  { year: '2026', category: 'photo-video', client: 'EO Osaka', description: 'OLC2026イベント写真動画撮影', url: 'https://www.eoosaka.org/eo_blog/monthly-meeting/5284/' },
+  { year: '2026', category: 'photo', client: 'BREEZE西宮店', description: 'BREEZE西宮店写真撮影', url: 'https://www.breeze-nishinomiya.net/' },
   { year: '2026', category: 'photo', client: '木谷ワイン', description: '商品写真撮影', url: 'https://narawine.com/' },
   { year: '2026', category: 'photo-video', client: '親愛幼稚園', description: '園内撮影・園紹介動画制作', url: 'https://shin-ai.ed.jp/' },
   { year: '2026', category: 'photo', client: 'アスカ工業株式会社', description: '製品写真撮影' },

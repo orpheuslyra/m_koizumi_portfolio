@@ -23,6 +23,7 @@ import BonchiShareOfficeThumbnail from '../assets/videos/thumbnail/BonchiShareOf
 import coststationss from '../assets/images/web/coststationscreenshot.png';
 import fivecsss from '../assets/images/web/fivecsss.png';
 import general from '../assets/images/web/GeneralBPO.png';
+import UmgolfWebThumbnail from '../assets/images/web/umgolf.png';
 
 //Webコンテンツ
 import umgolfbanner from '../assets/images/design/umgolfwebbanner.png';
@@ -343,6 +344,15 @@ export const sampleWebWorks: WebWork[] = [
       solution: 'プロの料理撮影と感情に訴えるコピーライティング',
       result: 'Web経由の予約が3倍に増加し、新規顧客獲得に大きく貢献'
     }
+  },
+  {
+    id: '4',
+    title: 'UM GOLF',
+    description: 'UM GOLF サイトリニューアル',
+    websiteUrl: 'https://umgolf68.com/',
+    imageUrl: UmgolfWebThumbnail,
+    category: 'landing',
+    technologies: ['PHP', 'WordPress', 'Custom CSS'],
   }
 ];
 
